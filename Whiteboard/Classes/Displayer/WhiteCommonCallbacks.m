@@ -53,6 +53,14 @@
     }
 }
 
+- (NSString *)slideOpenUrl:(NSString *)url
+{
+    if ([self.slideDelegate respondsToSelector:@selector(slideOpenUrl:)]) {
+        [self.slideDelegate slideOpenUrl:url];
+    }
+    return @"";
+}
+
 - (NSString *)urlInterrupter:(NSString *)url
 {
     if ([self.delegate respondsToSelector:@selector(urlInterrupter:)]) {
@@ -123,13 +131,14 @@
         WhiteSlideErrorType errorType = dict[@"errorType"];
         NSString* errorMsg = dict[@"errorMsg"];
         NSString* slideId = dict[@"slideId"];
+        NSInteger slideIndex = -1;
         NSNumber* slideIndexNumber = dict[@"slideIndex"];
-        if (slideIndexNumber) {
-            NSInteger slideIndex = [slideIndexNumber integerValue];
-            if ([self.slideDelegate respondsToSelector:@selector(onSlideError:errorMessage:slideId:slideIndex:)]) {
-                [self.slideDelegate onSlideError:errorType errorMessage:errorMsg slideId:slideId slideIndex:slideIndex];
-                return @"";
-            }
+        if (slideIndexNumber && [slideIndexNumber isKindOfClass:[NSNumber class]]) {
+            slideIndex = [slideIndexNumber integerValue];
+        }
+        if ([self.slideDelegate respondsToSelector:@selector(onSlideError:errorMessage:slideId:slideIndex:)]) {
+            [self.slideDelegate onSlideError:errorType errorMessage:errorMsg slideId:slideId slideIndex:slideIndex];
+            return @"";
         }
     }
     if (dict && [self.delegate respondsToSelector:@selector(customMessage:)]) {

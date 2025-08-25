@@ -7,6 +7,35 @@
 # Whiteboard 版本记录
 - 基于 White-SDK-iOS 基础上，整理结构，进行开源。
 开源版本，版本延续旧版本数字，在此数字基础上，进行版本更新。
+## [2.16.121] - 2025-08-14
+- 新增 `WhiteRoomConfig.appliancePluginOptions` 参数，支持 appliancePlugin 参数配置。
+- 更新 `@netless/appliance-plugin` 至 1.1.19
+## [2.16.120] - 2025-08-05
+- 更新 `@netless/app-slide` 至 0.2.80 
+- 修复 `onSlideError` 回调中 `slideIndex` 可能不存在的错误
+## [2.16.119] - 2025-07-08
+- `WhiteAppParam.createSlideApp` 支持 customLinks 参数
+- `WhiteSlideDelegate` 新增 `slideOpenUrl` 回调，用于监听 PPT 点击链接事件
+- 更新 `@netless/app-slide` 至 0.2.78
+## [2.16.118] - 2025-06-26
+- 更新 `@netless/app-slide` 至 0.2.76
+## [2.16.117] - 2025-06-19
+- 更新 `@netless/app-slide` 至 0.2.75
+- 更新 `@netless/window-manager` 至 1.0.5
+## [2.16.116] - 2025-06-10
+- 更新 `@netless/app-slide` 至 0.2.73
+- 更新 `@netless/window-manager` 至 1.0.4
+- 更新 `@netless/appliance-plugin` 至 1.1.17
+## [2.16.115] - 2025-05-21
+- 新增 `WhiteAudioPcmDataDelegate` 回调，支持获取白板音频数据
+- 更新 `@netless/app-slide` 至 0.2.72
+- 更新 `@netless/window-manager`至 1.0.2
+## [2.16.114] - 2025-04-14
+- 更新 `@netless/app-slide` 至 0.2.66。
+## [2.16.113] - 2025-04-09
+- 更新 `@netless/app-slide` 至 0.2.64, 修复频繁失去焦点导致状态与预期不一致问题。
+## [2.16.112] - 2025-03-19
+- 更新 `white-web-sdk` 至 2.16.53
 ## [2.16.111] - 2025-02-25
 - 新增 `WhiteMemberState.strokeOpacity`, 用于更改线框透明度，仅在 WhiteSdkConfiguration.enableAppliancePlugin 启用时有效。
 - 新增 `WhiteMemberState.fillOpacity`, 用于更改填充透明度，仅在 WhiteSdkConfiguration.enableAppliancePlugin 启用时有效。
