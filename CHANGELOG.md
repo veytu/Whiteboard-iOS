@@ -7,6 +7,12 @@
 # Whiteboard 版本记录
 - 基于 White-SDK-iOS 基础上，整理结构，进行开源。
 开源版本，版本延续旧版本数字，在此数字基础上，进行版本更新。
+## [2.16.124] - 2025-09-12
+- 修复 AudioContext 低于 14.5 的兼容性问题
+## [2.16.123] - 2025-09-09
+- 更新 `@netless/app-slide` 至 0.2.81
+## [2.16.122] - 2025-08-22
+- 更新 `@netless/appliance-plugin` 至 1.1.21
 ## [2.16.121] - 2025-08-14
 - 新增 `WhiteRoomConfig.appliancePluginOptions` 参数，支持 appliancePlugin 参数配置。
 - 更新 `@netless/appliance-plugin` 至 1.1.19
