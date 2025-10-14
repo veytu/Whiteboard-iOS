@@ -1,3 +1,5 @@
+ M .npmrc
+ M .yarnrc
  M package.json
  M src/bridge/SDK.ts
  M yarn.lock
